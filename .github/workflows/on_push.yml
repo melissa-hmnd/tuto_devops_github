@@ -1,9 +1,16 @@
 name: Check sources
 on: push
 jobs:
-  testscript:
+  myScript:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Check script
         run: test -e run.sh
+  shellcheck:
+    name: ShellMeli
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run ShellCheck
+        uses: ludeeus/action-shellcheck@master
