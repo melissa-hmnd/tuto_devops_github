@@ -38,7 +38,9 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/melissa-hmnd/tuto_test:latest     
+          tags: 
+            ghcr.io/${{ github.repository }}:latest,
+            ghcr.io/${{ github.repository }}:${{ github.ref_name }}
   
 #  documentaiton:
 #   runs-on: ubuntu-latest
