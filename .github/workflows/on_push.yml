@@ -1,8 +1,5 @@
 name: Check sources
-on: 
-  push:
-    branches-ignore: 
-      main
+on: push
 jobs:
   myScript:
     runs-on: ubuntu-latest    
