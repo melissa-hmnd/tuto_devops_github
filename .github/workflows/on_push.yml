@@ -29,6 +29,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/container
+        with:
+          username: ${{ github.actor }}
+          password: ${{ inputs.github_token }}
       - run: echo output-message
         shell: bash
 
