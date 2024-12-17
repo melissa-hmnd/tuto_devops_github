@@ -15,9 +15,9 @@ runs:
         password: ${{ secrets.GITHUB_TOKEN }}
     - uses: docker/build-push-action@v2
       with:
-      context: .
-      push: true
-      tags: 
-        ghcr.io/${{ github.repository }}:latest,
-        ghcr.io/${{ github.repository }}:${{ github.ref_name }}
+        context: .
+        push: true
+        tags: 
+          ghcr.io/${{ github.repository }}:latest,
+          ghcr.io/${{ github.repository }}:${{ github.ref_name }}
 
