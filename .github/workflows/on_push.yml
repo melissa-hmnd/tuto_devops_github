@@ -8,7 +8,7 @@ jobs:
       - name: Check script
         run: test -e run.sh
       - name: testRun
-        run: make test      
+        run: make tests    
   shellcheck:
     name: ShellMeli
     runs-on: ubuntu-latest
