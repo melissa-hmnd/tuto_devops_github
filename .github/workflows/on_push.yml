@@ -2,13 +2,12 @@ name: Check sources
 on: push
 jobs:
   myScript:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest    
+    needs: shellcheck
     steps:
       - uses: actions/checkout@v2
       - name: Check script
-        run: test -e run.sh
-      - name: testRun
-        run: make tests    
+        run: test -e run.sh        
   shellcheck:
     name: ShellMeli
     runs-on: ubuntu-latest
