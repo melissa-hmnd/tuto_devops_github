@@ -1,5 +1,14 @@
 name: 'Container'
 description: 'Create Container'
+inputs:
+  username:  # id of input
+    description: 'username'
+    required: true
+    default: 'World'
+  password:  # id of input
+    description: 'password'
+    required: true
+    default: 'World'
 outputs:
   output-message:
     description: "Output Message"
@@ -11,8 +20,8 @@ runs:
       uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
       with:
         registry: https://ghcr.io
-        username: ${{ github.actor }}
-        password: ${{ secrets.GITHUB_TOKEN }}
+        username: ${{ inputs.username }}
+        password: ${{ inputs.password }}
     - uses: docker/build-push-action@v2
       with:
         context: .
