@@ -31,7 +31,7 @@ jobs:
       - uses: ./.github/actions/container
         with:
           username: ${{ github.actor }}
-          password: ${{ inputs.github_token }}
+          password: ${{ secrets.GITHUB_TOKEN }}
       - run: echo output-message
         shell: bash
 
