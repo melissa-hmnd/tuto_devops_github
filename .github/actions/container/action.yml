@@ -22,4 +22,4 @@ runs:
       with:
         context: .
         push: true
-        tags: ${{ inputs.docker_repo }}/tuto_dev:latest, ${{ inputs.docker_repo }}/tuto_dev:${{ github.ref_name }}
+        tags: ${{ inputs.docker_repo }}/tuto_dev_melisse:latest, ${{ inputs.docker_repo }}/tuto_dev_melisse:${{ github.ref_name }}
