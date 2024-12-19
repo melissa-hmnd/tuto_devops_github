@@ -44,8 +44,8 @@ jobs:
       - name: SonarQube Scan
         uses: SonarSource/sonarqube-scan-action@v4 # Ex: v4.1.0, See the latest version at https://github.com/marketplace/actions/official-sonarqube-scan
         env:
-          SONAR_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SONAR_HOST_URL: ${{ vars.SONAR_TOKEN  }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ vars.SONAR_TOKEN  }}
     
 
   
